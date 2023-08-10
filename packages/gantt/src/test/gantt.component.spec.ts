@@ -65,7 +65,7 @@ const config = {
                 <div class="row-after"></div>
             </ng-template>
             <ngx-gantt-column
-                name="标题"
+                name="Titolo"
                 width="200px"
                 [class.title-name]="true"
                 [ngClass]="{ 'title-name-2': true }"
@@ -129,7 +129,7 @@ export class TestGanttBasicComponent {
                 <div class="test-gantt-with-groups-group"></div>
             </ng-template>
             <ngx-gantt-table>
-                <ngx-gantt-column name="标题" width="200px">
+                <ngx-gantt-column name="Titolo" width="200px">
                     <ng-template #cell let-item="item">
                         {{ item.title }}
                     </ng-template>
@@ -154,7 +154,7 @@ export class TestGanttWithGroupsComponent {
     selector: 'test-gantt-load-children',
     template: ` <ngx-gantt #gantt [items]="items" [viewType]="viewType" [async]="async" [childrenResolve]="childrenResolve">
         <ngx-gantt-table>
-            <ngx-gantt-column name="标题" width="200px">
+            <ngx-gantt-column name="Titolo" width="200px">
                 <ng-template #cell let-item="item">
                     {{ item.title }}
                 </ng-template>
@@ -193,7 +193,7 @@ export class TestGanttLoadChildrenComponent {
     selector: 'test-gantt-selectable',
     template: ` <ngx-gantt #gantt [items]="items" [selectable]="selectable" [multiple]="multiple" (selectedChange)="selectedChange($event)">
         <ngx-gantt-table>
-            <ngx-gantt-column name="标题" width="200px">
+            <ngx-gantt-column name="Titolo" width="200px">
                 <ng-template #cell let-item="item">
                     {{ item.title }}
                 </ng-template>
@@ -222,7 +222,7 @@ export class TestGanttSelectableComponent {
     selector: 'test-gantt-custom-toolbar',
     template: ` <ngx-gantt #gantt [items]="items">
         <ngx-gantt-table>
-            <ngx-gantt-column name="标题" width="200px">
+            <ngx-gantt-column name="Titolo" width="200px">
                 <ng-template #cell let-item="item">
                     {{ item.title }}
                 </ng-template>

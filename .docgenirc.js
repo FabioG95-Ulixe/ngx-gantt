@@ -9,7 +9,7 @@ module.exports = {
     navs: [
         null,
         {
-            title: '组件',
+            title: 'Componenti',
             path: 'components',
             locales: {
                 'en-us': {
@@ -18,7 +18,7 @@ module.exports = {
             }
         },
         {
-            title: '参数',
+            title: 'Paramentri',
             path: 'configuration',
             lib: 'ngx-gantt',
             locales: {
@@ -33,7 +33,7 @@ module.exports = {
             isExternal: true
         },
         {
-            title: '更新日志',
+            title: 'Changelog',
             path: 'https://github.com/worktile/ngx-gantt/blob/master/CHANGELOG.md',
             isExternal: true,
             locales: {

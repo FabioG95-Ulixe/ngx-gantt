@@ -50,7 +50,7 @@ const mockBarItems = [
         (linkDragStarted)="linkDragStarted($event)"
     >
         <ngx-gantt-table>
-            <ngx-gantt-column name="标题" width="200px">
+            <ngx-gantt-column name="Titolo" width="200px">
                 <ng-template #cell let-item="item">
                     {{ item.title }}
                 </ng-template>

@@ -12,12 +12,12 @@ import { GanttTableHeaderComponent } from '../header/gantt-table-header.componen
     template: `
         <ngx-gantt #gantt [items]="items" [groups]="groups" [selectable]="selectable" [multiple]="multiple">
             <ngx-gantt-table>
-                <ngx-gantt-column name="开始时间" width="140px">
+                <ngx-gantt-column name="Data inizio" width="140px">
                     <ng-template #cell let-item="item">
                         {{ item.start * 1000 | date : 'yyyy-MM-dd' }}
                     </ng-template>
                 </ngx-gantt-column>
-                <ngx-gantt-column [width]="200" name="标题" [showExpandIcon]="showExpandIcon">
+                <ngx-gantt-column [width]="200" name="Titolo" [showExpandIcon]="showExpandIcon">
                     <ng-template #cell let-item="item">
                         {{ item.title }}
                     </ng-template>

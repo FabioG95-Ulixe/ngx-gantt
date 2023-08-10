@@ -96,7 +96,7 @@ export class GanttTableDragDroppedEvent<T = unknown> {
 
 # GanttTableDragStartedEvent
 
-Table 组件拖拽开始后事件
+Table Componenti 拖拽开始后事件
 
 ```ts
 export class GanttTableDragStartedEvent<T = unknown> {
@@ -107,7 +107,7 @@ export class GanttTableDragStartedEvent<T = unknown> {
 
 # GanttTableDragEndedEvent
 
-Table 组件拖拽结束后事件
+Table Componenti 拖拽结束后事件
 
 ```ts
 export class GanttTableDragEndedEvent<T = unknown> {

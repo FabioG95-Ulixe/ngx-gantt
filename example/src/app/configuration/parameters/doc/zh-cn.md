@@ -1,6 +1,6 @@
 ---
 category: config
-title: 参数
-subtitle: Parameters
+title: Paramentri
+subtitle:
 order: 1
 ---

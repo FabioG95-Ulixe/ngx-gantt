@@ -28,7 +28,7 @@ class GanttViewMock extends GanttView {
     getPrimaryDatePoints(): GanttDatePoint[] {
         return [
             {
-                text: '2020年',
+                text: '2020Anno',
                 x: 1820,
                 y: 18,
                 start: new GanttDate('2020-01-01 00:00:00')

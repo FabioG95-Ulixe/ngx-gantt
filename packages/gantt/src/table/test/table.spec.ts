@@ -10,7 +10,7 @@ import { GanttTableBodyComponent } from '../../components/table/body/gantt-table
     template: `
         <ngx-gantt #gantt [items]="items" [groups]="groups">
             <ngx-gantt-table>
-                <ngx-gantt-column [width]="200" name="标题">
+                <ngx-gantt-column [width]="200" name="Titolo">
                     <ng-template #cell let-item="item">
                         {{ item.title }}
                     </ng-template>

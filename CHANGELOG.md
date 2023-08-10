@@ -427,7 +427,7 @@ All notable changes to this project will be documented in this file. See [standa
 - support week view and add test(#INFR-1996) ([75a6930](https://github.com/worktile/ngx-gantt/commit/75a6930b7f57235571ef0f4cfa713caa99bca13b)), closes [#INFR-1996](https://github.com/worktile/ngx-gantt/issues/INFR-1996)
 - support week view and add test(#INFR-1996) ([#113](https://github.com/worktile/ngx-gantt/issues/113)) ([ac1c252](https://github.com/worktile/ngx-gantt/commit/ac1c25259db73ff814ddd8f4662c29a3d3bea7b4)), closes [#INFR-1996](https://github.com/worktile/ngx-gantt/issues/INFR-1996) [#INFR-1996](https://github.com/worktile/ngx-gantt/issues/INFR-1996)
 - support year view and add test(#INFR-2007) ([#117](https://github.com/worktile/ngx-gantt/issues/117)) ([0f12338](https://github.com/worktile/ngx-gantt/commit/0f1233857da0acc377332a3f602909525ed1d93a)), closes [#INFR-2007](https://github.com/worktile/ngx-gantt/issues/INFR-2007) [#INFR-2007](https://github.com/worktile/ngx-gantt/issues/INFR-2007) [#INFR-2007](https://github.com/worktile/ngx-gantt/issues/INFR-2007)
-- 修改日视图的 bar 长度(#INFR-2013) ([9ac28e7](https://github.com/worktile/ngx-gantt/commit/9ac28e754936c1ba7bad76a247cc8e8d3a0b163a)), closes [#INFR-2013](https://github.com/worktile/ngx-gantt/issues/INFR-2013)
+- 修改 Giorno 视图的 bar 长度(#INFR-2013) ([9ac28e7](https://github.com/worktile/ngx-gantt/commit/9ac28e754936c1ba7bad76a247cc8e8d3a0b163a)), closes [#INFR-2013](https://github.com/worktile/ngx-gantt/issues/INFR-2013)
 
 ### Bug Fixes
 
@@ -448,7 +448,7 @@ All notable changes to this project will be documented in this file. See [standa
 - fix function ([88d66d3](https://github.com/worktile/ngx-gantt/commit/88d66d33af800e708acb321e77c3964894a715a3))
 - fix review code ([e570b43](https://github.com/worktile/ngx-gantt/commit/e570b431ced5ab2d1ea41cb9ae3719c39b58e29e))
 - review code ([51d583f](https://github.com/worktile/ngx-gantt/commit/51d583fae89e9dcc021d662d7c0479ca1d4c8cdd))
-- 当开始时间或者截止时间未设时，甘特图中显示的默认 bar 的长度应该因视图不同而不同(#INFR-2013) ([1c31fc6](https://github.com/worktile/ngx-gantt/commit/1c31fc6f641f48e94b7999c3cf73d5499107f499)), closes [#INFR-2013](https://github.com/worktile/ngx-gantt/issues/INFR-2013)
+- 当 Data inizio 或者 Data fine 未设时，甘特图中显示的默认 bar 的长度应该因视图不同而不同(#INFR-2013) ([1c31fc6](https://github.com/worktile/ngx-gantt/commit/1c31fc6f641f48e94b7999c3cf73d5499107f499)), closes [#INFR-2013](https://github.com/worktile/ngx-gantt/issues/INFR-2013)
 
 ### [0.0.49](https://github.com/worktile/ngx-gantt/compare/0.0.48...0.0.49) (2021-01-18)
 

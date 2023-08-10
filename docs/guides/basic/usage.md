@@ -6,12 +6,12 @@ order: 10
 
 ## 基本使用
 
-一般情况下最基本的使用我们只需要定义 `items` 数据传入组件中（需要注意的是，目前时间格式仅支持 10 位时间戳），如需要左侧的表格展示，则还需要定义表格的 column
+一般情况下最基本的使用我们只需要定义 `items` 数据传入 Componenti 中（需要注意的是，目前时间格式仅支持 10 位时间戳），如需要左侧的表格展示，则还需要定义表格的 column
 
 ```html
 <ngx-gantt #gantt [items]="items">
   <ngx-gantt-table>
-    <ngx-gantt-column name="标题" width="300px">
+    <ngx-gantt-column name="Titolo" width="300px">
       <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
     </ngx-gantt-column>
   </ngx-gantt-table>
@@ -36,7 +36,7 @@ export class AppGanttExampleComponent {
 ```html
 <ngx-gantt #gantt [groups]="groups" [items]="items">
   <ngx-gantt-table>
-    <ngx-gantt-column name="标题" width="300px">
+    <ngx-gantt-column name="Titolo" width="300px">
       <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
     </ngx-gantt-column>
   </ngx-gantt-table>
@@ -75,7 +75,7 @@ export class AppGanttExampleComponent {
 }
 ```
 
-如果需要异步加载子数据，我们需要设置将组件的 `async` 设置为 `true` 然后设置加载子数据的 Resolve 函数 `childrenResolve`，最后我们还需要指定哪些数据是可展开的。
+如果需要异步加载子数据，我们需要设置将 Componenti 的 `async` 设置为 `true` 然后设置加载子数据的 Resolve 函数 `childrenResolve`，最后我们还需要指定哪些数据是可展开的。
 
 ```html
 <ngx-gantt #gantt [items]="items" [async]="true" [childrenResolve]="childrenResolve"> ... </ngx-gantt>
@@ -126,7 +126,7 @@ export class AppGanttExampleComponent {
 
 ## 滚动加载
 
-为了保证组件的性能，默认情况下只会展示一定周期的时间（不同的视图周期不同），所以组件默认开启了滚动加载。如果不需要滚动加载可以通过设置 `[disabledLoadOnScroll]=true` 来禁用。
+为了保证 Componenti 的性能，默认情况下只会展示一定 Settimana 期的时间（不同的视图 Settimana 期不同），所以 Componenti 默认开启了滚动加载。如果不需要滚动加载可以通过设置 `[disabledLoadOnScroll]=true` 来禁用。
 
 ```html
 <ngx-gantt #gantt [items]="items" (loadOnScroll)="loadOnScroll($event)"> ... </ngx-gantt>
@@ -183,9 +183,9 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 导出为图片
+## Scarica
 
-如需要导出图片功能，我们需要在使用组件时注入图片打印服务 `GanttPrintService`
+如需要导出图片功能，我们需要在使用 Componenti 时注入图片打印服务 `GanttPrintService`
 
 ```javascript
 @Component({

@@ -48,13 +48,13 @@ export class AppModule {
 @use "@worktile/gantt/styles/index.scss";
 ```
 
-### 组件中使用
+### Componenti 中使用
 
 ```html
 <!-- component.html -->
 <ngx-gantt #gantt [items]="items">
   <ngx-gantt-table>
-    <ngx-gantt-column name="标题" width="300px">
+    <ngx-gantt-column name="Titolo" width="300px">
       <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
     </ngx-gantt-column>
   </ngx-gantt-table>

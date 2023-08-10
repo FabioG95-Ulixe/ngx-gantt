@@ -4,7 +4,7 @@ path: 'data-type'
 order: 30
 ---
 
-`ngx-gantt` 组件接收两种数据输入类型 `GanttItem`和`GanttGroup`。`GanttItem` 指甘特图数据项格式，`GanttGroup`指分组数据格式，具体类型定义如下：
+`ngx-gantt` Componenti 接收两种数据输入类型 `GanttItem`和`GanttGroup`。`GanttItem` 指甘特图数据项格式，`GanttGroup`指分组数据格式，具体类型定义如下：
 
 # GanttItem
 
@@ -33,8 +33,8 @@ export interface GanttItem<T = unknown> {
 | ---------- | ------------------------------ | ------- | -------------------------------------- |
 | id         | `string`                       | `-`     | 唯一标识                               |
 | title      | `string`                       | `-`     | 名称                                   |
-| start      | `number`                       | `-`     | 开始时间 (10 位时间戳)                 |
-| end        | `number`                       | `-`     | 截止时间(10 位时间戳)                  |
+| start      | `number`                       | `-`     | Data inizio (10 位时间戳)              |
+| end        | `number`                       | `-`     | Data fine(10 位时间戳)                 |
 | group_id   | `string`                       | `-`     | 对应分组的 Id                          |
 | links      | `string[]`                     | `-`     | 具有关联关系的`GanttItem`的`id`集合    |
 | draggable  | `boolean`                      | `-`     | 设置是否可拖拽                         |

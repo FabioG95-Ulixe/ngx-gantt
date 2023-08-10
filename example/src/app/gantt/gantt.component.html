@@ -7,20 +7,20 @@
         </button>
       </thy-button-group>
       &nbsp; &nbsp; &nbsp;
-      <thy-button thyType="primary" thySize="sm" (click)="refresh()">刷新</thy-button>
+      <thy-button thyType="primary" thySize="sm" (click)="refresh()">Aggiorna</thy-button>
       &nbsp; &nbsp; &nbsp;
-      <thy-button thyType="primary" thySize="sm" (click)="scrollToToday()">今天</thy-button>
+      <thy-button thyType="primary" thySize="sm" (click)="scrollToToday()">Oggi</thy-button>
       &nbsp; &nbsp; &nbsp;
-      <thy-button thyType="primary" thySize="sm" (click)="print('gantt-example')"> ↓ 导出为图片 </thy-button>
+      <thy-button thyType="primary" thySize="sm" (click)="print('gantt-example')"> ↓ Scarica </thy-button>
       &nbsp; &nbsp; &nbsp;
-      <span>工具栏：</span>
+      <span>Strumenti：</span>
       <thy-switch class="baseline-switch" [(ngModel)]="isShowToolbarChecked"> </thy-switch>
       &nbsp; &nbsp; &nbsp;
-      <span>基线对比：</span>
-      <thy-switch class="baseline-switch" [(ngModel)]="isBaselineChecked" (ngModelChange)="switchChange()">基线对比 </thy-switch>
+      <span>Confronto：</span>
+      <thy-switch class="baseline-switch" [(ngModel)]="isBaselineChecked" (ngModelChange)="switchChange()">Confronto </thy-switch>
     </ng-template>
     <ng-template #headerOperation>
-      <a href="https://github.com/worktile/ngx-gantt/blob/master/example/src/app/gantt" target="_blank">查看源码</a>
+      <a href="https://github.com/worktile/ngx-gantt/blob/master/example/src/app/gantt" target="_blank">Codice sorgente</a>
     </ng-template>
   </thy-header>
   <thy-content>
@@ -58,15 +58,15 @@
             {{ item.id }}
           </ng-template>
         </ngx-gantt-column>
-        <ngx-gantt-column name="标题" width="160px" [showExpandIcon]="true">
+        <ngx-gantt-column name="Titolo" width="160px" [showExpandIcon]="true">
           <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
         </ngx-gantt-column>
-        <ngx-gantt-column name="开始时间">
+        <ngx-gantt-column name="Data inizio">
           <ng-template #cell let-item="item">
             {{ item.start * 1000 | date : 'yyyy-MM-dd' }}
           </ng-template>
         </ngx-gantt-column>
-        <ngx-gantt-column name="截止时间">
+        <ngx-gantt-column name="Data fine">
           <ng-template #cell let-item="item">
             {{ item.end * 1000 | date : 'yyyy-MM-dd' }}
           </ng-template>

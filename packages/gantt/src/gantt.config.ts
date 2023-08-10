@@ -17,12 +17,12 @@ export interface GanttGlobalConfig {
 
 export const defaultConfig = {
     dateFormat: {
-        week: '第w周',
-        month: 'M月',
+        week: 'w',
+        month: 'M',
         quarter: 'QQQ',
-        year: 'yyyy年',
-        yearMonth: 'yyyy年MM月',
-        yearQuarter: 'yyyy年QQQ'
+        year: 'yyyy',
+        yearMonth: 'MM-yyyy',
+        yearQuarter: 'QQQ-yyyy'
     },
     linkOptions: {
         dependencyTypes: [GanttLinkType.fs],

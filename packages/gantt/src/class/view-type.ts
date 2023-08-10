@@ -8,23 +8,23 @@ export enum GanttViewType {
 
 export const ganttViews = [
     {
-        name: '日',
+        name: 'Giorno',
         value: GanttViewType.day
     },
     {
-        name: '周',
+        name: 'Settimana',
         value: GanttViewType.week
     },
     {
-        name: '月',
+        name: 'Mese',
         value: GanttViewType.month
     },
     {
-        name: '季',
+        name: 'Trimestre',
         value: GanttViewType.quarter
     },
     {
-        name: '年',
+        name: 'Anno',
         value: GanttViewType.year
     }
 ];

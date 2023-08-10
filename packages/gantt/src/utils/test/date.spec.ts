@@ -100,6 +100,6 @@ describe('tiny-date', () => {
     });
 
     it('support format', () => {
-        expect(date.format('yyyy年QQQ')).toBe('2020年Q1');
+        expect(date.format('yyyyAnnoQQQ')).toBe('2020AnnoQ1');
     });
 });

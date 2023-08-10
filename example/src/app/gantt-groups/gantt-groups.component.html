@@ -9,11 +9,11 @@
 
       &nbsp; &nbsp; &nbsp;
       <thy-button thyType="primary" thySize="sm" (click)="expandAllGroups()">
-        {{ expanded ? '折叠全部分组' : '展开全部分组' }}
+        {{ expanded ? 'Comprimi/Espandi gruppi' : '展开全部分组' }}
       </thy-button>
     </ng-template>
     <ng-template #headerOperation>
-      <a href="https://github.com/worktile/ngx-gantt/blob/master/example/src/app/gantt-groups" target="_blank">查看源码</a>
+      <a href="https://github.com/worktile/ngx-gantt/blob/master/example/src/app/gantt-groups" target="_blank">Codice sorgente</a>
     </ng-template>
   </thy-header>
   <thy-content>
@@ -27,15 +27,15 @@
       [childrenResolve]="childrenResolve"
     >
       <ngx-gantt-table [draggable]="true">
-        <ngx-gantt-column name="标题" width="180px">
+        <ngx-gantt-column name="Titolo" width="180px">
           <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
         </ngx-gantt-column>
-        <ngx-gantt-column name="开始时间" width="140px">
+        <ngx-gantt-column name="Data inizio" width="140px">
           <ng-template #cell let-item="item">
             {{ item.start * 1000 | date : 'yyyy-MM-dd' }}
           </ng-template>
         </ngx-gantt-column>
-        <ngx-gantt-column name="截止时间" width="140px">
+        <ngx-gantt-column name="Data fine" width="140px">
           <ng-template #cell let-item="item">
             {{ item.end * 1000 | date : 'yyyy-MM-dd' }}
           </ng-template>

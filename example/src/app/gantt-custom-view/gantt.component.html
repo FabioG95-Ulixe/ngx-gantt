@@ -1,11 +1,11 @@
 <thy-layout>
   <thy-header>
     <ng-template #headerContent>
-      <span>显示周末：</span>
+      <span>Mostra domenica：</span>
       <thy-switch [(ngModel)]="showWeekend" (ngModelChange)="weekendChange()"> </thy-switch>
     </ng-template>
     <ng-template #headerOperation>
-      <a href="https://github.com/worktile/ngx-gantt/blob/master/example/src/app/gantt-custom-view" target="_blank">查看源码</a>
+      <a href="https://github.com/worktile/ngx-gantt/blob/master/example/src/app/gantt-custom-view" target="_blank">Codice sorgente</a>
     </ng-template>
   </thy-header>
   <thy-content>
@@ -28,7 +28,7 @@
       (linkDragEnded)="linkDragEnded($event)"
     >
       <ngx-gantt-table>
-        <ngx-gantt-column name="标题" width="300px">
+        <ngx-gantt-column name="Titolo" width="300px">
           <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
         </ngx-gantt-column>
       </ngx-gantt-table>

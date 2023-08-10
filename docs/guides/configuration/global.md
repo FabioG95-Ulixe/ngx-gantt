@@ -38,6 +38,6 @@ export interface GanttGlobalConfig {
 }
 ```
 
-| Name       | Type              | Description |
-| ---------- | ----------------- | ----------- |
-| dateFormat | `GanttDateFormat` | 日期格式    |
+| Name       | Type              | Description   |
+| ---------- | ----------------- | ------------- |
+| dateFormat | `GanttDateFormat` | Giorno 期格式 |

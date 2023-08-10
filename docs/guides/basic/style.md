@@ -4,7 +4,7 @@ path: 'style'
 order: 50
 ---
 
-`ngx-gantt` 使用了 `css` 预处理器 `scss`，支持重写组件的大部分的色值和部分 layout 样式。示例如下：
+`ngx-gantt` 使用了 `css` 预处理器 `scss`，支持重写 Componenti 的大部分的色值和部分 layout 样式。示例如下：
 
 ```scss
 @use '@worktile/gantt/styles/variables.scss' with (

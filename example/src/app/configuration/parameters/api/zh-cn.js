@@ -16,7 +16,7 @@ module.exports = [
             },
             {
                 name: 'baselineItems',
-                description: `设置基线对比数据`,
+                description: `设置Confronto数据`,
                 type: 'GanttBaselineItem[]'
             },
             {
@@ -27,7 +27,7 @@ module.exports = [
             },
             {
                 name: 'start',
-                description: `设置甘特图开始时间，格式为10位时间戳`,
+                description: `设置甘特图Data inizio，格式为10位时间戳`,
                 type: 'number'
             },
             {
@@ -117,13 +117,13 @@ module.exports = [
             },
             {
                 name: 'showToolbar',
-                description: `设置是否展示工具栏`,
+                description: `设置是否展示Strumenti`,
                 type: 'boolean',
                 default: 'false'
             },
             {
                 name: 'toolbarOptions',
-                description: `工具栏配置项`,
+                description: `Strumenti配置项`,
                 type: 'GanttToolbarOptions',
                 default: `{
                     viewTypes: [GanttViewType.day, GanttViewType.month, GanttViewType.year]
@@ -191,7 +191,7 @@ module.exports = [
             },
             {
                 name: '#toolbar',
-                description: `工具栏自定义模版`,
+                description: `Strumenti自定义模版`,
                 type: 'TemplateRef<any>'
             }
         ]
@@ -279,7 +279,7 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-bar',
-        description: '数据项条形图展示组件',
+        description: '数据项条形图展示Componenti',
         properties: [
             {
                 name: 'template',
@@ -301,7 +301,7 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-range',
-        description: '数据项区间展示组件',
+        description: '数据项区间展示Componenti',
         properties: [
             {
                 name: 'template',
@@ -318,11 +318,11 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-toolbar',
-        description: '工具栏组件',
+        description: 'StrumentiComponenti',
         properties: [
             {
                 name: 'template',
-                description: `自定义工具栏模板`,
+                description: `自定义Strumenti模板`,
                 type: 'TemplateRef<any>'
             }
         ]
@@ -330,7 +330,7 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-baseline',
-        description: '基线展示组件',
+        description: '基线展示Componenti',
         properties: [
             {
                 name: 'baselineItem',
@@ -342,7 +342,7 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-root',
-        description: '甘特图根组件',
+        description: '甘特图根Componenti',
         properties: [
             {
                 name: 'sideWidth',

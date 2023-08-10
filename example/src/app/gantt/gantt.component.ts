@@ -30,23 +30,23 @@ import { randomItems, random } from '../helper';
 export class AppGanttExampleComponent implements OnInit, AfterViewInit {
     views = [
         {
-            name: '日',
+            name: 'Giorno',
             value: GanttViewType.day
         },
         {
-            name: '周',
+            name: 'Settimana',
             value: GanttViewType.week
         },
         {
-            name: '月',
+            name: 'Mese',
             value: GanttViewType.month
         },
         {
-            name: '季',
+            name: 'Quadrimestre',
             value: GanttViewType.quarter
         },
         {
-            name: '年',
+            name: 'Anno',
             value: GanttViewType.year
         }
     ];
@@ -107,7 +107,7 @@ export class AppGanttExampleComponent implements OnInit, AfterViewInit {
 
     viewOptions = {
         dateFormat: {
-            month: 'M月'
+            month: 'MM'
         }
     };
 

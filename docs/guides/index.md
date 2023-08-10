@@ -1,5 +1,5 @@
 ---
-title: 指南
+title: Guida
 path: 'guides'
 order: 1
 ---
