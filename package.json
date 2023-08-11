@@ -1,5 +1,5 @@
 {
-  "name": "@ulixe/gantt",
+  "name": "@ulixe23/gantt",
   "version": "15.1.4",
   "description": "A modern and powerful gantt chart component for Angular",
   "keywords": [
@@ -119,12 +119,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/worktile/ngx-gantt.git"
+    "url": "git+https://github.com/FabioG95-Ulixe/ngx-gantt"
   },
   "author": "walkerkay001",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/worktile/ngx-gantt/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/worktile/ngx-gantt#readme"
+  "homepage": ""
 }

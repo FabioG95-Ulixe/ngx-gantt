@@ -7,9 +7,9 @@ order: 2
 # 安装
 
 ```bash
-$ npm i @worktile/gantt --save
+$ npm i @ulixe23/gantt --save
 # or
-$ yarn add @worktile/gantt
+$ yarn add @ulixe23/gantt
 ```
 
 # 使用
@@ -18,7 +18,7 @@ $ yarn add @worktile/gantt
 
 ```ts
 import { NgModule } from '@angular/core';
-import { NgxGanttModule } from '@worktile/gantt';
+import { NgxGanttModule } from '@ulixe23/gantt';
 
 @NgModule({
   ...
@@ -38,14 +38,14 @@ export class AppModule {
 
 ```json
 {
-  "styles": ["node_modules/@worktile/gantt/styles/index.scss"]
+  "styles": ["node_modules/@ulixe23/gantt/styles/index.scss"]
 }
 ```
 
 在 style.scss 中引入预构建样式文件
 
 ```
-@use "@worktile/gantt/styles/index.scss";
+@use "@ulixe23/gantt/styles/index.scss";
 ```
 
 ### Componenti 中使用

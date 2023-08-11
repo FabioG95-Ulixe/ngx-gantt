@@ -4,7 +4,7 @@ module.exports = {
     siteProjectName: 'example',
     outputDir: 'dist/site',
     logoUrl: 'https://cdn.pingcode.com/open-sources/gantt/logo.png',
-    repoUrl: 'https://github.com/worktile/ngx-gantt',
+    repoUrl: 'https://github.com/FabioG95-Ulixe/ngx-gantt',
     defaultLocale: 'it-IT',
     navs: [
         null,
@@ -29,12 +29,12 @@ module.exports = {
         },
         {
             title: 'GitHub',
-            path: 'https://github.com/worktile/ngx-gantt',
+            path: 'https://github.com/FabioG95-Ulixe/ngx-gantt',
             isExternal: true
         },
         {
             title: 'Changelog',
-            path: 'https://github.com/worktile/ngx-gantt/blob/master/CHANGELOG.md',
+            path: '',
             isExternal: true,
             locales: {
                 'en-us': {
