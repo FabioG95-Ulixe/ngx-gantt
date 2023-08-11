@@ -5,7 +5,6 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@worktile/gantt?style=flat)](https://www.npmjs.com/package/@worktile/gantt)
 [![npm](https://img.shields.io/npm/dm/@worktile/gantt)](https://www.npmjs.com/package/@worktile/gantt)
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@worktile/gantt)
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 
 [coveralls-image]: https://coveralls.io/repos/github/worktile/ngx-gantt/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/github/worktile/ngx-gantt
@@ -99,28 +98,6 @@ $ npm run start
 ## Roadmap
 
 - [ ] virtual scrolling
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/walkerkay"><img src="https://avatars.githubusercontent.com/u/15701592?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Walker</b></sub></a><br /><a href="#question-walkerkay" title="Answering Questions">💬</a> <a href="https://github.com/walkerkay/ngx-gantt/commits?author=walkerkay" title="Code">💻</a> <a href="#design-walkerkay" title="Design">🎨</a> <a href="https://github.com/walkerkay/ngx-gantt/commits?author=walkerkay" title="Documentation">📖</a> <a href="#infra-walkerkay" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-walkerkay" title="Maintenance">🚧</a> <a href="#projectManagement-walkerkay" title="Project Management">📆</a> <a href="https://github.com/walkerkay/ngx-gantt/pulls?q=is%3Apr+reviewed-by%3Awalkerkay" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://github.com/HandsomeButterball"><img src="https://avatars.githubusercontent.com/u/17664721?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zhangwen</b></sub></a><br /><a href="https://github.com/walkerkay/ngx-gantt/commits?author=HandsomeButterball" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/mengshuicmq"><img src="https://avatars.githubusercontent.com/u/13193164?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cmq</b></sub></a><br /><a href="https://github.com/walkerkay/ngx-gantt/commits?author=mengshuicmq" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## LICENSE
 
