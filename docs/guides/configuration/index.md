@@ -1,4 +1,4 @@
 ---
-title: 配置
+title: Configurazione
 order: 30
 ---

@@ -5,7 +5,7 @@ module.exports = {
     outputDir: 'dist/site',
     logoUrl: 'https://cdn.pingcode.com/open-sources/gantt/logo.png',
     repoUrl: 'https://github.com/worktile/ngx-gantt',
-    defaultLocale: 'zh-cn',
+    defaultLocale: 'it-IT',
     navs: [
         null,
         {
@@ -18,7 +18,7 @@ module.exports = {
             }
         },
         {
-            title: 'Paramentri',
+            title: 'Parametri',
             path: 'configuration',
             lib: 'ngx-gantt',
             locales: {
@@ -51,7 +51,7 @@ module.exports = {
             categories: [
                 {
                     id: 'config',
-                    title: '配置',
+                    title: 'Configurazione',
                     locales: {
                         'en-us': {
                             title: 'Configuration'
