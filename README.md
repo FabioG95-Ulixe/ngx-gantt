@@ -1,9 +1,7 @@
 # ngx-gantt
 
-[![CircleCI](https://circleci.com/gh/worktile/ngx-gantt.svg?style=shield)](https://circleci.com/gh/worktile/ngx-gantt)
-[![Coverage Status][coveralls-image]][coveralls-url]
-[![npm (scoped)](https://img.shields.io/npm/v/@worktile/gantt?style=flat)](https://www.npmjs.com/package/@worktile/gantt)
-[![npm](https://img.shields.io/npm/dm/@worktile/gantt)](https://www.npmjs.com/package/@worktile/gantt)
+[![npm (scoped)](https://img.shields.io/npm/v/@worktile/gantt?style=flat)](https://www.npmjs.com/package/@ulixe23/gantt)
+[![npm](https://img.shields.io/npm/dm/@worktile/gantt)](https://www.npmjs.com/package/@ulixe23/gantt)
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@worktile/gantt)
 
 [coveralls-image]: https://coveralls.io/repos/github/worktile/ngx-gantt/badge.svg?branch=master
