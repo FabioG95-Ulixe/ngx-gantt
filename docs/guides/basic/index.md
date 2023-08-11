@@ -1,4 +1,4 @@
 ---
-title: 基本用法
+title: Utilizzo di base
 order: 20
 ---

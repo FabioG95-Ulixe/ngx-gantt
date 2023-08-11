@@ -1,10 +1,10 @@
 ---
-title: 快速开始
-path: 'getting-started'
+title:
+path: 'Per iniziare'
 order: 2
 ---
 
-# 安装
+# Installazione
 
 ```bash
 $ npm i @ulixe23/gantt --save
@@ -12,9 +12,9 @@ $ npm i @ulixe23/gantt --save
 $ yarn add @ulixe23/gantt
 ```
 
-# 使用
+# Utilizzo
 
-### 导入模块
+### Importazione modulo
 
 ```ts
 import { NgModule } from '@angular/core';
@@ -32,9 +32,9 @@ export class AppModule {
 
 <br/>
 
-### 引入样式
+### Importazione stile
 
-在 angular.json 中引入
+angular.json
 
 ```json
 {
@@ -42,13 +42,13 @@ export class AppModule {
 }
 ```
 
-在 style.scss 中引入预构建样式文件
+style.scss
 
 ```
 @use "@ulixe23/gantt/styles/index.scss";
 ```
 
-### Componenti 中使用
+### Utilizzarlo nei componenti
 
 ```html
 <!-- component.html -->

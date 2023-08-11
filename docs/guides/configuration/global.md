@@ -1,10 +1,10 @@
 ---
 category: config
-title: 全局配置
+title: Configurazione globale
 subtitle:
 ---
 
-`ngx-gantt` 提供了可注入的全局配置 `GANTT_GLOBAL_CONFIG` ，使用者可以在 `Module` 或 `Component` 注入自定义的符合格式的配置来修改全局配置。
+`ngx-gantt` Fornisce una configurazione globale iniettabile `GANTT_GLOBAL_CONFIG` ，Gli utenti possono inserire il file `Module` o `Component` o iniettare una configurazione conforme personalizzata per modificare la configurazione globale.
 
 ```javascript
 import { GANTT_GLOBAL_CONFIG } from 'ngx-gantt';
@@ -30,7 +30,7 @@ export class AppModule {
 
 ```
 
-`GANTT_GLOBAL_CONFIG` 格式如下：
+`GANTT_GLOBAL_CONFIG` Il formato è il seguente：
 
 ```javascript
 export interface GanttGlobalConfig {
@@ -40,4 +40,4 @@ export interface GanttGlobalConfig {
 
 | Name       | Type              | Description   |
 | ---------- | ----------------- | ------------- |
-| dateFormat | `GanttDateFormat` | Giorno 期格式 |
+| dateFormat | `GanttDateFormat` | Giorno formato data |

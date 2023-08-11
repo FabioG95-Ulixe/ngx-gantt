@@ -1,10 +1,10 @@
 ---
-title: 数据类型
+title: Tipi di dati
 path: 'data-type'
 order: 30
 ---
 
-`ngx-gantt` Componenti 接收两种数据输入类型 `GanttItem`和`GanttGroup`。`GanttItem` 指甘特图数据项格式，`GanttGroup`指分组数据格式，具体类型定义如下：
+Il componente `ngx-gantt` accetta due tipi di input di dati `GanttItem` e `GanttGroup`. `GanttItem` si riferisce al formato dell'elemento di dati del diagramma di Gantt, `GanttGroup` si riferisce al formato di dati di gruppo e i tipi specifici sono definiti come segue:
 
 # GanttItem
 
@@ -31,22 +31,22 @@ export interface GanttItem<T = unknown> {
 
 | Name       | Type                           | Default | Description                            |
 | ---------- | ------------------------------ | ------- | -------------------------------------- |
-| id         | `string`                       | `-`     | 唯一标识                               |
-| title      | `string`                       | `-`     | 名称                                   |
-| start      | `number`                       | `-`     | Data inizio (10 位时间戳)              |
-| end        | `number`                       | `-`     | Data fine(10 位时间戳)                 |
-| group_id   | `string`                       | `-`     | 对应分组的 Id                          |
-| links      | `string[]`                     | `-`     | 具有关联关系的`GanttItem`的`id`集合    |
-| draggable  | `boolean`                      | `-`     | 设置是否可拖拽                         |
-| linkable   | `boolean`                      | `-`     | 设置是否可关联/被关联                  |
-| expandable | `boolean`                      | `-`     | 设置是否可展开/收起                    |
-| expanded   | `boolean`                      | `false` | 设置是否展开/收起                      |
-| children   | `GanttItem[]`                  | `-`     | 设置子数据                             |
-| color      | `string`                       | `-`     | 设置颜色                               |
-| barStyle   | `Partial<CSSStyleDeclaration>` | `-`     | 设置样式                               |
-| origin     | `T`                            | `-`     | 设置原始数据                           |
-| type       | `GanttItemType`                | `-`     | 设置数据展示方式（区间展示和普通展示） |
-| progress   | `number`                       | `-`     | 设置进度                               |
+| id         | `string`                       | `-`     | Identificativo univoco                               |
+| title      | `string`                       | `-`     | Titolo                                   |
+| start      | `number`                       | `-`     | Data inizio (10 timestamp)              |
+| end        | `number`                       | `-`     | Data fine(10 timestamp)                 |
+| group_id   | `string`                       | `-`     | Id gruppo                          |
+| links      | `string[]`                     | `-`     | Una raccolta di `id` di `GanttItem` con associazioni   |
+| draggable  | `boolean`                      | `-`     | Imposta drag and drop                         |
+| linkable   | `boolean`                      | `-`     | Imposta se si possono linkare dati                  |
+| expandable | `boolean`                      | `-`     | Imposta se espandere/comprimere                   |
+| expanded   | `boolean`                      | `false` | Imposta se espanso o no                      |
+| children   | `GanttItem[]`                  | `-`     | Imposta i dati figlio                             |
+| color      | `string`                       | `-`     | Colore                               |
+| barStyle   | `Partial<CSSStyleDeclaration>` | `-`     | Stile barra                               |
+| origin     | `T`                            | `-`     | Origine dati                           |
+| type       | `GanttItemType`                | `-`     | Imposta la modalità di visualizzazione dei dati (visualizzazione a intervalli e visualizzazione normale) |
+| progress   | `number`                       | `-`     | Imposta l'avanzamento                               |
 
 # GanttGroup
 
@@ -62,8 +62,8 @@ export interface GanttGroup<T = unknown> {
 
 | Name     | Type      | Default | Description       |
 | -------- | --------- | ------- | ----------------- |
-| id       | `string`  | `-`     | 唯一标识          |
-| title    | `string`  | `-`     | 名称              |
-| expanded | `boolean` | `true`  | 设置是否展开/收起 |
-| origin   | `T`       | `-`     | 设置原始数据      |
-| class    | `string`  | `-`     | 设置`class`       |
+| id       | `string`  | `-`     | Identificativo univoco         |
+| title    | `string`  | `-`     | Titolo              |
+| expanded | `boolean` | `true`  | Imposta se espanso o no  |
+| origin   | `T`       | `-`     | Origine dati      |
+| class    | `string`  | `-`     | CSS `class`       |

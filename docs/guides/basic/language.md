@@ -1,11 +1,11 @@
 ---
-title: 多语言
+title: Multi lingua
 order: 60
 ---
 
-`ngx-gantt` 中的文案都是视图 Giorno 历中的 Giorno 期展示，我们提供了自定义这些 Giorno 期格式的两种方式。
+Per le date nel calendario in `ngx-gantt`. Forniamo due modi per personalizzare questi formati di data.
 
-第一种是注入[全局配置](/guides/configuration/global)，这种方式可以全局修改甘特图 Giorno 历中的 Giorno 期格式，注入全局配置方式如下：
+Il primo è inserire una [Configurazione globale](/guides/configuration/global). Questo metodo può modificare globalmente il formato della data nel calendario del diagramma di Gantt.Il modo per inserire la configurazione globale è il seguente:
 
 ```javascript
 import { GANTT_GLOBAL_CONFIG } from 'ngx-gantt';
@@ -31,7 +31,7 @@ export class AppModule {
 
 ```
 
-另一种方式则是通过 `viewOptions` 传参进行局部甘特图 Giorno 期格式修改，实现方式如下：
+Un altro modo è modificare il formato della data del diagramma di Gantt locale tramite i parametri di passaggio `viewOptions` e il metodo di implementazione è il seguente:
 
 ```html
 <ngx-gantt [viewOptions]="viewOptions"> ... </ngx-gantt>
@@ -55,4 +55,4 @@ export class AppGanttExampleComponent {
 }
 ```
 
-`ngx-gantt` 创建视图时会根据这些配置或 Paramentri 基于 [date-fns](https://date-fns.org/v2.28.0/docs/format) 的 `format` 方法得出 Giorno 历中的 Giorno 期格式，更多格式请参考 [date-fns](https://date-fns.org/v2.28.0/docs/format) 官方文档。
+Quando `ngx-gantt` crea una vista, otterrà la data nel calendario in base al metodo `format` di [date-fns](https://date-fns.org/v2.28.0/docs/format) in base a queste configurazioni o parametri Formato, per ulteriori formati, fare riferimento al documento ufficiale [date-fns](https://date-fns.org/v2.28.0/docs/format).

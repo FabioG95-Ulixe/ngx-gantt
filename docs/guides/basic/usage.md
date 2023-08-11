@@ -1,12 +1,12 @@
 ---
-title: 如何使用
+title: Utilizzo
 path: usage
 order: 10
 ---
 
-## 基本使用
+## Uso di base
 
-一般情况下最基本的使用我们只需要定义 `items` 数据传入 Componenti 中（需要注意的是，目前时间格式仅支持 10 位时间戳），如需要左侧的表格展示，则还需要定义表格的 column
+In generale, per l'uso più basilare, abbiamo solo bisogno di definire i dati `items` nel componente (va notato che il formato dell'ora corrente supporta solo timestamp a 10 cifre), e se hai bisogno di mostrare colonne a sinistra è inoltre necessario definirle.
 
 ```html
 <ngx-gantt #gantt [items]="items">
@@ -29,9 +29,10 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 如何设置分组
+## Come impostare il raggruppamento
 
-分组模式下我们还需要传入一个 `groups` 的数组，并且保证我们传入的 `items` 数据中设置了每个数据项的 `group_id`
+In modalità di gruppo, dobbiamo anche passare il parametro `groups` come array e assicurarsi che il `group_id` di ciascun elemento di dati sia impostato nei dati `items` che passiamo.
+
 
 ```html
 <ngx-gantt #gantt [groups]="groups" [items]="items">
@@ -56,9 +57,9 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 树形结构展示
+## Visualizzazione della struttura ad albero
 
-`GanttItem` 类型包含 `children` 属性，默认情况下只要我们传入了 `children` 属性则就就会展示为树形结构。
+Il tipo `GanttItem` contiene l'attributo `children`. Per impostazione predefinita, finché passiamo l'attributo `children`, verrà visualizzato come una struttura ad albero.
 
 ```javascript
 export class AppGanttExampleComponent {
@@ -74,8 +75,7 @@ export class AppGanttExampleComponent {
   ];
 }
 ```
-
-如果需要异步加载子数据，我们需要设置将 Componenti 的 `async` 设置为 `true` 然后设置加载子数据的 Resolve 函数 `childrenResolve`，最后我们还需要指定哪些数据是可展开的。
+Se devi caricare i dati figlio in modo asincrono, dobbiamo impostare `async` del componente su `true` e quindi impostare la funzione Resolve `childrenResolve` per caricare i dati figlio e infine dobbiamo specificare quali dati sono espandibili.
 
 ```html
 <ngx-gantt #gantt [items]="items" [async]="true" [childrenResolve]="childrenResolve"> ... </ngx-gantt>
@@ -83,13 +83,13 @@ export class AppGanttExampleComponent {
 
 ```javascript
 export class AppGanttExampleComponent {
-  // 设置 expandable 为true 指定数据是可展开的
+  // Impostare expandable su true per specificare che i dati sono espandibili
   items: GanttItem[] = [
     { id: '000000', title: 'Task 0', start: 1627729997, end: 1628421197, expandable: true },
     { id: '000001', title: 'Task 1', start: 1617361997, end: 1625483597, expandable: true }
   ];
 
-  // 设置加载子数据的 Resolve 函数，返回值必须是一个可观察对象 Observable
+  // Impostare la funzione Resolve per il caricamento dei dati figlio, il valore restituito deve essere un oggetto osservabile Observable
   childrenResolve = (item: GanttItem) => {
     const children = randomItems(random(1, 5), item);
     return of(children).pipe(delay(1000));
@@ -97,9 +97,12 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 依赖
+## Creare associazioni
 
 如果我们需要展示数据项的依赖关系，则需要设置 `GanttItem` 中的 `links` 属性，设置需要关联的 id，如果需要拖拽创建关联关系，则需要设置 `[linkable] = true`，在某些场景下可能我们需要设置某一条数据开启拖拽创建关联，我们也可以通过设置 item 数据的 `linkable` 来实现。
+
+Se dobbiamo visualizzare le dipendenze degli elementi di dati, dobbiamo impostare l'attributo `links` in `GanttItem` e impostare l'id da associare. Se dobbiamo trascinare e rilasciare per creare una relazione di associazione, dobbiamo impostare `[linkable] = true`, in alcuni scenari, potremmo aver bisogno di impostare un pezzo di dati per abilitare il trascinamento della selezione per creare associazioni. Possiamo anche raggiungere questo obiettivo impostando il `linkable` dei dati dell'elemento
+
 
 ```html
 <ngx-gantt #gantt [items]="items" [linkable]="true" (linkDragEnded)="linkDragEnded($event)"> ... </ngx-gantt>
@@ -124,9 +127,9 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 滚动加载
+## Caricamento a scorrimento
 
-为了保证 Componenti 的性能，默认情况下只会展示一定 Settimana 期的时间（不同的视图 Settimana 期不同），所以 Componenti 默认开启了滚动加载。如果不需要滚动加载可以通过设置 `[disabledLoadOnScroll]=true` 来禁用。
+Per garantire le prestazioni del componente, per impostazione predefinita verrà visualizzato solo un determinato periodo di tempo (diversi periodi di visualizzazione sono diversi), quindi il componente ha il caricamento dello scorrimento abilitato per impostazione predefinita. Se lo scorrimento non è richiesto, può essere disabilitato impostando `[disabledLoadOnScroll]=true`.
 
 ```html
 <ngx-gantt #gantt [items]="items" (loadOnScroll)="loadOnScroll($event)"> ... </ngx-gantt>
@@ -148,9 +151,9 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 拖拽
+## Drag and Drop
 
-通过设置 `[draggable]=true` 来启用拖拽功能，支持 `(dragStarted)`、`(dragEnded)` 事件。
+Abilita il trascinamento impostando `[draggable]=true`, supporta gli eventi `(dragStarted)`, `(dragEnded)`.
 
 ```html
 <ngx-gantt #gantt [items]="items" [draggable]="true" (dragEnded)="dragEnded($event)"> ... </ngx-gantt>
@@ -169,9 +172,9 @@ export class AppGanttExampleComponent {
 }
 ```
 
-## 选择整行
+## Selezionare l'intera riga
 
-通过设置 `[selectable]=true` 来启用选择整行功能，同时也可使用 `[multiple]=true` 来启用多选模式。支持 `(selectedChange)` 事件。
+Abilita la selezione dell'intera riga impostando `[selectable]=true` e usa anche `[multiple]=true` per abilitare la modalità di selezione multipla. Supporta l'evento `(selectedChange)`.
 
 ```html
 <ngx-gantt #gantt [items]="items" [selectable]="true" [multiple]="true" (selectedChange)="selectedChange($event)"> ... </ngx-gantt>
@@ -185,7 +188,7 @@ export class AppGanttExampleComponent {
 
 ## Scarica
 
-如需要导出图片功能，我们需要在使用 Componenti 时注入图片打印服务 `GanttPrintService`
+Se è necessario esportare il Gantt come immagine è necessario iniettare il servizio di stampa di immagini `GanttPrintService` quando si utilizza il componente.
 
 ```javascript
 @Component({

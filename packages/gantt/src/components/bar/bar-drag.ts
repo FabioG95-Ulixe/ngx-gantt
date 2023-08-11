@@ -289,7 +289,6 @@ export class GanttBarDrag implements OnDestroy {
                 if (this.barDragRef) {
                     this.barDragRef.disabled = false;
                 }
-                // 计算line拖动的落点位于目标Bar的值，如果值大于Bar宽度的一半，说明是拖动到Begin位置，否则则为拖动到End位置
                 if (this.dragContainer.linkDragPath.to) {
                     const placePointX =
                         event.source.getRootElement().getBoundingClientRect().x -

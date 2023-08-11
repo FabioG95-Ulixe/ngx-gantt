@@ -6,124 +6,124 @@ module.exports = [
         properties: [
             {
                 name: 'items',
-                description: `设置数据项，如果单独设置items则会以列表形式展示，如果需要分组展示，则需要设置属性groupId对应分组数据`,
+                description: `Imposta gli elementi di dati. Se imposti gli elementi singolarmente, verranno visualizzati in un elenco. Se è necessario visualizzarli in gruppi, è necessario impostare l'attributo groupId in modo che corrisponda ai dati di gruppo`,
                 type: 'GanttItem[]'
             },
             {
                 name: 'groups',
-                description: `设置分组数据`,
+                description: `Imposta i gruppi`,
                 type: 'GanttGroup[]'
             },
             {
                 name: 'baselineItems',
-                description: `设置Confronto数据`,
+                description: `Configura i dati di confronto`,
                 type: 'GanttBaselineItem[]'
             },
             {
                 name: 'viewType',
-                description: `设置视图类型`,
+                description: `Configura il tipo di vista`,
                 type: `day | month | quarter`,
                 default: 'month'
             },
             {
                 name: 'start',
-                description: `设置甘特图Data inizio，格式为10位时间戳`,
+                description: `Imposta nel diagramma di Gantt la data inizio, il formato è timestamp a 10 cifre`,
                 type: 'number'
             },
             {
                 name: 'end',
-                description: `设置甘特图结束时间，格式为10位时间戳`,
+                description: `Imposta nel diagramma di Gantt la data fine, il formato è timestamp a 10 cifre`,
                 type: 'number'
             },
             {
                 name: 'draggable',
-                description: `设置是否可拖拽`,
+                description: `Imposta drag and drop`,
                 type: 'boolean',
                 default: 'false'
             },
             {
                 name: 'virtualScrollEnabled',
-                description: `设置是否使用虚拟滚动功能`,
+                description: `Imposta il virtual scroll`,
                 type: 'boolean',
                 default: 'true'
             },
             {
                 name: 'linkable',
-                description: `设置是否可连接关联关系`,
+                description: `Imposta se i dati possono essere collegati`,
                 type: 'boolean',
                 default: 'false'
             },
 
             {
                 name: 'loading',
-                description: `是否展示加载器`,
+                description: `Imposta il caricamento`,
                 type: 'boolean',
                 default: 'false'
             },
 
             {
                 name: 'loadingDelay',
-                description: '设置在多少`毫秒`内,忽略加载器展示',
+                description: 'Quanti "millisecondi" impostare di ritardo per il loader',
                 type: 'number',
                 default: '0'
             },
 
             {
                 name: 'maxLevel',
-                description: `设置最大展示层级`,
+                description: `Imposta il livello massimo di visualizzazione`,
                 type: 'number',
                 default: 2
             },
 
             {
                 name: 'async',
-                description: `设置是否开始异步`,
+                description: `Imposta se avviare in modo asincrono`,
                 type: 'boolean',
                 default: 'false'
             },
             {
                 name: 'childrenResolve',
-                description: `设置异步数据源返回函数，返回值为 Observable 数据流`,
+                description: `Imposta la funzione di ritorno dell'origine dati asincrona e il valore restituito è un flusso di dati Observable`,
                 type: 'Function'
             },
 
             {
                 name: 'styles',
-                description: `配置内置的样式选项`,
+                description: `Configura lo stile`,
                 type: 'GanttStyles'
             },
             {
                 name: 'viewOptions',
-                description: `配置视图选项`,
+                description: `Configura le opzioni di visualizzazione`,
                 type: 'GanttViewOptions'
             },
             {
                 name: 'disabledLoadOnScroll',
-                description: `设置是否禁用滚动加载`,
+                description: `Disabilita il caricamento allo scroll`,
                 type: 'boolean',
                 default: false
             },
             {
                 name: 'selectable',
-                description: `设置是否启动选择整行`,
+                description: `Impostare se possibile selezionare l'intera riga`,
                 type: 'boolean',
                 default: 'false'
             },
             {
                 name: 'multiple',
-                description: `设置选择整行是否为多选模式`,
+                description: `Imposta se possibile selezionare l'intera riga in modalità di selezione multipla`,
                 type: 'boolean',
                 default: 'false'
             },
             {
                 name: 'showToolbar',
-                description: `设置是否展示Strumenti`,
+                description: `Mostra barra degli strumenti`,
                 type: 'boolean',
                 default: 'false'
             },
             {
                 name: 'toolbarOptions',
-                description: `Strumenti配置项`,
+                description: `Opzioni barra degli strumenti`,
                 type: 'GanttToolbarOptions',
                 default: `{
                     viewTypes: [GanttViewType.day, GanttViewType.month, GanttViewType.year]
@@ -131,67 +131,67 @@ module.exports = [
             },
             {
                 name: 'loadOnScroll',
-                description: `滚动加载事件`,
+                description: `Evento Caricamento allo scorrimento`,
                 type: 'EventEmitter<GanttLoadOnScrollEvent>'
             },
             {
                 name: 'dragStarted',
-                description: `拖拽开始后事件`,
+                description: `Evento Drag iniziato`,
                 type: 'EventEmitter<GanttDragEvent>'
             },
             {
                 name: 'dragEnded',
-                description: `拖拽结束后事件`,
+                description: `Evento Drag finito`,
                 type: 'EventEmitter<GanttDragEvent>'
             },
             {
                 name: 'linkDragStarted',
-                description: `关联关系拖拽开始后事件`,
+                description: `Evento di caricamento dell'evento dopo lo scorrimento e l'inizio del trascinamento della relazione di associazione`,
                 type: 'EventEmitter<GanttLinkDragEvent>'
             },
             {
                 name: 'linkDragEnded',
-                description: `关联关系拖拽结束后事件`,
+                description: `L'evento dopo la relazione di associazione viene trascinato e rilasciato`,
                 type: 'EventEmitter<GanttLinkDragEvent>'
             },
             {
                 name: 'barClick',
-                description: `右侧时间条点击事件`,
+                description: `Evento click sulla barra elemento`,
                 type: 'EventEmitter<GanttBarClickEvent>'
             },
             {
                 name: 'lineClick',
-                description: `关联关系线点击时间`,
+                description: `Evento click sulla linea`,
                 type: 'EventEmitter<GanttLinkDragEvent>'
             },
             {
                 name: 'selectedChange',
-                description: `选择数据项事件`,
+                description: `Evento cambio selezione`,
                 type: 'EventEmitter<GanttSelectedEvent>'
             },
             {
                 name: '#group',
-                description: `设置分组显示模板`,
+                description: `Impostare il modello di visualizzazione del gruppo`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: '#bar',
-                description: `设置时间条显示模板`,
+                description: `Impostare il modello di visualizzazione della barra`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: '#groupHeader',
-                description: `设置分组头部显示模板`,
+                description: `Impostare il modello di visualizzazione dell'intestazione gruppo`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: '#tableEmpty',
-                description: `设置空表格模板`,
+                description: `Impostare il modello di visualizzazione della tabella vuota`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: '#toolbar',
-                description: `Strumenti自定义模版`,
+                description: `Impostare il modello di visualizzazione della barra degli strumenti`,
                 type: 'TemplateRef<any>'
             }
         ]
@@ -199,52 +199,52 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-table',
-        description: '甘特图左侧表格',
+        description: 'Tabella di sinistra del diagramma di Gantt',
         properties: [
             {
                 name: 'draggable',
-                description: `设置表格数据项是否支持上下拖动排序`,
+                description: `Imposta se gli elementi di dati della tabella supportano l'ordinamento con trascinamento verso l'alto e verso il basso`,
                 default: false,
                 type: 'boolean'
             },
             {
                 name: 'dropEnterPredicate',
-                description: `该函数用于判断是否允许某个数据项拖到其他项`,
+                description: `Questa funzione viene utilizzata per determinare se un elemento di dati può essere trascinato su altri elementi`,
                 type: '(context: GanttTableDragEnterPredicateContext<T>) => boolean'
             },
             {
                 name: 'dragDropped',
-                description: `当把一个数据项拖动到另一个数据项时就会触发`,
+                description: `Attivato quando si trascina un elemento dati su un altro elemento dati`,
                 type: 'EventEmitter<GanttTableDragDroppedEvent>'
             },
             {
                 name: 'dragStarted',
-                description: `拖拽开始后事件`,
+                description: `Evento dopo l'inizio del trascinamento`,
                 type: 'EventEmitter<GanttTableDragStartedEvent>'
             },
             {
                 name: 'dragEnded',
-                description: `拖拽结束后事件`,
+                description: `Evento dopo la fine del trascinamento`,
                 type: 'EventEmitter<GanttTableDragEndedEvent>'
             },
             {
                 name: 'columnChanges',
-                description: `列宽变化事件集`,
+                description: `Insieme di eventi di modifica della larghezza della colonna`,
                 type: 'EventEmitter<GanttTableEvent>'
             },
             {
                 name: 'itemClick',
-                description: `选择整行数据项事件`,
+                description: `Selezionare l'evento dell'elemento di dati dell'intera riga`,
                 type: 'EventEmitter<GanttSelectedEvent>'
             },
             {
                 name: '#rowBeforeSlot',
-                description: `设置表格中每行的前置自定义渲染模板`,
+                description: `Imposta il modello di rendering personalizzato anteriore per ogni riga della tabella`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: '#rowAfterSlot',
-                description: `设置表格中每行的后置自定义渲染模板`,
+                description: `Imposta il modello di rendering personalizzato posteriore per ogni riga della tabella`,
                 type: 'TemplateRef<any>'
             }
         ]
@@ -252,26 +252,26 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-column',
-        description: '甘特图左侧列',
+        description: 'Colonna sinistra del diagramma di Gantt',
         properties: [
             {
                 name: 'name',
-                description: `设置列名称`,
+                description: `Nome`,
                 type: 'string'
             },
             {
                 name: 'width',
-                description: `设置列宽`,
+                description: `Larghezza`,
                 type: 'string ｜ number'
             },
             {
                 name: '#header',
-                description: `设置每列头部模板`,
+                description: `Imposta il modello di contenuto per ogni intestazione`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: '#cell',
-                description: `设置每列内容模板`,
+                description: `Imposta il modello di contenuto per ogni colonna`,
                 type: 'TemplateRef<any>'
             }
         ]
@@ -279,21 +279,21 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-bar',
-        description: '数据项条形图展示Componenti',
+        description: 'Visualizzazione grafico a barre dei dati',
         properties: [
             {
                 name: 'template',
-                description: `设置时间条显示模板`,
+                description: `Impostare il modello di visualizzazione della barra del tempo`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: 'item',
-                description: `设置时间条显示数据`,
+                description: `Imposta i dati nella barra del tempo`,
                 type: 'GanttItemInternal'
             },
             {
                 name: 'barClick',
-                description: `数据项条形图点击事件`,
+                description: `Evento di click del grafico a barre dell'elemento di dati`,
                 type: 'EventEmitter<GanttBarClickEvent>'
             }
         ]
@@ -301,16 +301,16 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-range',
-        description: '数据项区间展示Componenti',
+        description: 'Visualizzazione intervallo dati',
         properties: [
             {
                 name: 'template',
-                description: `设置区间展示模板`,
+                description: `Impostare il modello di visualizzazione dell'intervallo`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: 'item',
-                description: `设置区间展示数据`,
+                description: `Impostare i dati di visualizzazione dell'intervallo`,
                 type: 'GanttItemInternal'
             }
         ]
@@ -318,11 +318,11 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-toolbar',
-        description: 'StrumentiComponenti',
+        description: 'Barra degli Strumenti',
         properties: [
             {
                 name: 'template',
-                description: `自定义Strumenti模板`,
+                description: `Template barra degli strumenti`,
                 type: 'TemplateRef<any>'
             }
         ]
@@ -330,11 +330,11 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-baseline',
-        description: '基线展示Componenti',
+        description: 'Visualizzazione della linea di base',
         properties: [
             {
                 name: 'baselineItem',
-                description: `设置基线展示数据`,
+                description: `Imposta i dati di visualizzazione della linea di base`,
                 type: 'GanttBaselineItemInternal'
             }
         ]
@@ -342,21 +342,21 @@ module.exports = [
     {
         type: 'component',
         name: 'ngx-gantt-root',
-        description: '甘特图根Componenti',
+        description: 'Gantt Root Configurazioni',
         properties: [
             {
                 name: 'sideWidth',
-                description: `设置甘特图左侧内容宽度`,
+                description: `Imposta la larghezza del contenuto a sinistra del diagramma di Gantt`,
                 type: 'number'
             },
             {
                 name: 'sideTemplate',
-                description: `设置甘特图左侧内容模板`,
+                description: `Imposta il modello di contenuto sul lato sinistro del diagramma di Gantt`,
                 type: 'TemplateRef<any>'
             },
             {
                 name: 'mainTemplate',
-                description: `设置甘特图右侧主要内容模板`,
+                description: `Imposta il modello di contenuto principale sul lato destro del diagramma di Gantt`,
                 type: 'TemplateRef<any>'
             }
         ]

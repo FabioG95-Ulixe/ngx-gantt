@@ -1,10 +1,10 @@
 ---
-title: 样式重写
+title: Stile
 path: 'style'
 order: 50
 ---
 
-`ngx-gantt` 使用了 `css` 预处理器 `scss`，支持重写 Componenti 的大部分的色值和部分 layout 样式。示例如下：
+`ngx-gantt` utilizza il preprocessore `css` `scss`, che supporta la riscrittura della maggior parte dei valori di colore e di alcuni stili di layout dei componenti. Gli esempi sono i seguenti:
 
 ```scss
 @use '@worktile/gantt/styles/variables.scss' with (

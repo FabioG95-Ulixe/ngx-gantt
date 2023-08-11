@@ -1,6 +1,6 @@
 {
-  "name": "@ulixe/gantt",
-  "version": "15.1.4",
+  "name": "@ulixe23/gantt",
+  "version": "15.1.6",
   "schematics": "./schematics/collection.json",
   "exports": {
     ".": {

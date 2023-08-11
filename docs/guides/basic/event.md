@@ -1,12 +1,12 @@
 ---
-title: 事件类型
+title: Eventi
 path: 'event'
 order: 40
 ---
 
 # GanttDragEvent
 
-数据项拖拽事件类，用于拖拽开始后或结束后传递数据项
+Classe dell'evento di trascinamento dell'elemento di dati, utilizzata per trasferire gli elementi di dati dopo l'inizio o la fine del trascinamento
 
 ```ts
 export class GanttDragEvent<T = unknown> {
@@ -16,7 +16,7 @@ export class GanttDragEvent<T = unknown> {
 
 # GanttTableEvent
 
-左侧表格列数或拖拽改变列宽时传递当前所有列的信息
+Passa le informazioni di tutte le colonne correnti quando il numero di colonne nella tabella di sinistra o trascina e rilascia per modificare la larghezza della colonna
 
 ```ts
 export class GanttTableEvent {
@@ -26,7 +26,7 @@ export class GanttTableEvent {
 
 # GanttLinkDragEvent
 
-拖拽数据项与其他数据项建立关联关系时传递当前数据项与目标数据项信息
+Quando si trascina un elemento di dati per stabilire una relazione di associazione con altri elementi di dati, trasferire le informazioni dell'elemento di dati corrente e dell'elemento di dati di destinazione
 
 ```ts
 export class GanttLinkDragEvent<T = unknown> {
@@ -37,7 +37,7 @@ export class GanttLinkDragEvent<T = unknown> {
 
 # GanttLoadOnScrollEvent
 
-左右滚动时传递滚动后的时间区间，便于使用方加载数据
+Quando si scorre a sinistra ea destra, passare l'intervallo di tempo dopo lo scorrimento, che è comodo per l'utente per caricare i dati
 
 ```ts
 export class GanttLoadOnScrollEvent {
@@ -48,7 +48,7 @@ export class GanttLoadOnScrollEvent {
 
 # GanttLineClickEvent
 
-点击两个建立关联关系的数据项的关联线时传递鼠标事件和两个数据项
+Passa l'evento del mouse ei due elementi di dati quando si fa clic sulla riga associata di due elementi di dati associati
 
 ```ts
 export class GanttLineClickEvent<T = unknown> {
@@ -60,7 +60,7 @@ export class GanttLineClickEvent<T = unknown> {
 
 # GanttBarClickEvent
 
-点击数据项时传递数据项信息
+Passa le informazioni sull'elemento dati quando si fa clic sull'elemento dati
 
 ```ts
 export class GanttBarClickEvent<T = unknown> {
@@ -71,7 +71,7 @@ export class GanttBarClickEvent<T = unknown> {
 
 # GanttSelectedEvent
 
-选择表格数据时传递数据项信息，在单选模式下返回单个数据对象，多选模式下返回数据项数组
+Passa le informazioni sugli elementi di dati quando selezioni i dati della tabella, restituisci un singolo oggetto di dati in modalità di selezione singola e restituisci un array di elementi di dati in modalità di selezione multipla
 
 ```ts
 export class GanttSelectedEvent<T = unknown> {
@@ -82,36 +82,36 @@ export class GanttSelectedEvent<T = unknown> {
 
 # GanttTableDragDroppedEvent
 
-当在 Table 中把一个数据项拖动到另一个数据项时触发事件的 Event
+Evento che attiva l'evento quando si trascina un elemento di dati su un altro elemento di dati nella tabella
 
 ```ts
 export class GanttTableDragDroppedEvent<T = unknown> {
-  source: GanttItem<T>; // 拖动开始数据项
-  sourceParent: GanttItem<T>; // 拖动开始数据项父 ID
-  target: GanttItem<T>; // 拖动目标数据项
-  targetParent: GanttItem<T>; // 拖动目标数据项父 ID
-  dropPosition: GanttTableDropPosition; // 拖动放下的位置  'before' | 'inside' | 'after'
+  source: GanttItem<T>;
+  sourceParent: GanttItem<T>;
+  target: GanttItem<T>;
+  targetParent: GanttItem<T>;
+  dropPosition: GanttTableDropPosition;
 }
 ```
 
 # GanttTableDragStartedEvent
 
-Table Componenti 拖拽开始后事件
+Evento successivo all'avvio del trascinamento del componente table
 
 ```ts
 export class GanttTableDragStartedEvent<T = unknown> {
-  source: GanttItem<T>; // 拖动开始数据项
-  sourceParent: GanttItem<T>; // 拖动开始数据项父
+  source: GanttItem<T>;
+  sourceParent: GanttItem<T>;
 }
 ```
 
 # GanttTableDragEndedEvent
 
-Table Componenti 拖拽结束后事件
+Evento dopo il termine del trascinamento del componente table
 
 ```ts
 export class GanttTableDragEndedEvent<T = unknown> {
-  source: GanttItem<T>; // 拖动开始数据项
-  sourceParent: GanttItem<T>; // 拖动开始数据项父
+  source: GanttItem<T>;
+  sourceParent: GanttItem<T>;
 }
 ```
