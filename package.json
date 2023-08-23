@@ -1,6 +1,6 @@
 {
   "name": "@ulixe23/gantt",
-  "version": "15.1.8",
+  "version": "15.1.10",
   "description": "A modern and powerful gantt chart component for Angular",
   "keywords": [
     "gantt",

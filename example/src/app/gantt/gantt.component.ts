@@ -17,7 +17,7 @@ import {
     GanttTableDragStartedEvent,
     GanttTableDragEndedEvent
 } from 'ngx-gantt';
-import { finalize, of } from 'rxjs';
+import { Subject, finalize, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { ThyNotifyService } from 'ngx-tethys/notify';
 import { randomItems, random } from '../helper';
@@ -110,6 +110,8 @@ export class AppGanttExampleComponent implements OnInit, AfterViewInit {
             month: 'MM'
         }
     };
+
+    public scrollYearSubject: Subject<number> = new Subject<number>();
 
     @HostBinding('class.gantt-example-component') class = true;
 
@@ -232,4 +234,8 @@ export class AppGanttExampleComponent implements OnInit, AfterViewInit {
     onDragEnded(event: GanttTableDragEndedEvent) {
         console.log('拖拽结束了', event);
     }
+
+    public emitEventScrollToYear(year: number) {
+        this.scrollYearSubject.next(year);
+      }
 }

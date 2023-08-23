@@ -15,7 +15,7 @@ import {
 import { GanttDomService, ScrollDirection } from './gantt-dom.service';
 import { GanttDragContainer } from './gantt-drag-container';
 import { take, takeUntil, startWith } from 'rxjs/operators';
-import { from, Subject } from 'rxjs';
+import { from, Observable, Subject, Subscription } from 'rxjs';
 import { GanttUpper, GANTT_UPPER_TOKEN } from './gantt-upper';
 import { GanttPrintService } from './gantt-print.service';
 import { passiveListenerOptions } from './utils/passive-listeners';
@@ -31,8 +31,8 @@ import { GanttDate } from './utils/date';
     }
 })
 export class NgxGanttRootComponent implements OnInit, OnDestroy {
+    private eventsSubscription: Subscription;
     @Input() sideWidth: number;
-
     @ContentChild('sideTemplate', { static: true }) sideTemplate: TemplateRef<any>;
 
     @ContentChild('mainTemplate', { static: true }) mainTemplate: TemplateRef<any>;
@@ -87,12 +87,11 @@ export class NgxGanttRootComponent implements OnInit, OnDestroy {
                 this.ganttUpper.viewChange.pipe(startWith<null, null>(null), takeUntil(this.unsubscribe$)).subscribe(() => {
                     this.scrollToToday();
                 });
-                this.ganttUpper.yearChange.pipe(startWith<null, null>(null), takeUntil(this.unsubscribe$)).subscribe((year: number) => {
-                    this.scrollToDate(year);
-                });
                 this.computeScrollBarOffset();
             });
         });
+
+        this.eventsSubscription = this.ganttUpper.yearChangeEvent.subscribe((res) => this.scrollToDate(res));
     }
 
     computeScrollBarOffset() {
@@ -112,6 +111,7 @@ export class NgxGanttRootComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         this.unsubscribe$.next();
+        this.eventsSubscription.unsubscribe();
     }
 
     private setupViewScroll() {

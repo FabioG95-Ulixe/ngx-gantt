@@ -11,6 +11,8 @@
       &nbsp; &nbsp; &nbsp;
       <thy-button thyType="primary" thySize="sm" (click)="scrollToToday()">Oggi</thy-button>
       &nbsp; &nbsp; &nbsp;
+      <thy-button thyType="primary" thySize="sm" (click)="emitEventScrollToYear(1641070825)">2022</thy-button>
+      &nbsp; &nbsp; &nbsp;
       <thy-button thyType="primary" thySize="sm" (click)="print('gantt-example')"> ↓ Scarica </thy-button>
       &nbsp; &nbsp; &nbsp;
       <span>Strumenti：</span>
@@ -38,6 +40,7 @@
       [toolbarOptions]="toolbarOptions"
       [loading]="loading"
       [virtualScrollEnabled]="false"
+      [yearChangeEvent]="scrollYearSubject.asObservable()"
       (barClick)="barClick($event)"
       (viewChange)="viewChange($event)"
       (lineClick)="lineClick($event)"

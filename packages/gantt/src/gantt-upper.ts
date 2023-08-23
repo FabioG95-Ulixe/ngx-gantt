@@ -16,7 +16,7 @@ import {
     OnDestroy,
     OnChanges
 } from '@angular/core';
-import { from, Subject } from 'rxjs';
+import { from, Observable, Subject } from 'rxjs';
 import { takeUntil, take, skip } from 'rxjs/operators';
 import {
     GanttItem,
@@ -63,6 +63,7 @@ export abstract class GanttUpper implements OnChanges, OnInit, OnDestroy {
     @Input() showTodayLine = true;
 
     @Input() draggable: boolean;
+    @Input() yearChangeEvent: Observable<number>;
 
     @Input() styles: GanttStyles;
 
@@ -121,7 +122,6 @@ export abstract class GanttUpper implements OnChanges, OnInit, OnDestroy {
     @Output() barClick = new EventEmitter<GanttBarClickEvent>();
 
     @Output() viewChange = new EventEmitter<GanttView>();
-    @Output() yearChange = new EventEmitter<number>();
 
     @Output() expandChange = new EventEmitter<GanttItemInternal | GanttGroupInternal>();
 
