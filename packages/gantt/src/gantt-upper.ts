@@ -121,6 +121,7 @@ export abstract class GanttUpper implements OnChanges, OnInit, OnDestroy {
     @Output() barClick = new EventEmitter<GanttBarClickEvent>();
 
     @Output() viewChange = new EventEmitter<GanttView>();
+    @Output() yearChange = new EventEmitter<number>();
 
     @Output() expandChange = new EventEmitter<GanttItemInternal | GanttGroupInternal>();
 

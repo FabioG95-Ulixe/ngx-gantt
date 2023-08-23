@@ -87,6 +87,9 @@ export class NgxGanttRootComponent implements OnInit, OnDestroy {
                 this.ganttUpper.viewChange.pipe(startWith<null, null>(null), takeUntil(this.unsubscribe$)).subscribe(() => {
                     this.scrollToToday();
                 });
+                this.ganttUpper.yearChange.pipe(startWith<null, null>(null), takeUntil(this.unsubscribe$)).subscribe((year: number) => {
+                    this.scrollToDate(year);
+                });
                 this.computeScrollBarOffset();
             });
         });
