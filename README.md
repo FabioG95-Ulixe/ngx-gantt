@@ -100,3 +100,5 @@ $ npm run start
 ## LICENSE
 
 [MIT License](https://github.com/worktile/ngx-gantt/blob/master/LICENSE)
+
+TEST
